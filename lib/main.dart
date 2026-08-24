@@ -10,9 +10,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: Text("Mi Super App"),
+          backgroundColor: Colors.black,
+          foregroundColor: Colors.white,
+          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.abc))],
+        ),
+        backgroundColor: Colors.amber,
         body: ImageWidget(),
+        floatingActionButton:
+            FloatingActionButton(onPressed: () {}, child: Icon(Icons.menu)),
       ),
     );
   }
